@@ -1,0 +1,273 @@
+html{
+    color: #fff;
+    scroll-behavior: smooth;
+}
+body {
+  background-image: linear-gradient(45deg, #EE8823,#000, #EE8823);
+  background-attachment: fixed; /* Mantém o gradiente fixo enquanto a página rola */
+  background-size: cover; /* Garante que o gradiente cubra toda a área visível */
+  height: 100vh; /* Define a altura do corpo como 100% da altura da janela de visualização */
+  margin: 0; /* Remove as margens padrão do corpo */
+  padding: 0; /* Remove os preenchimentos padrão do corpo */
+  animation: degrade 5s linear infinite alternate;
+}
+
+@keyframes degrade {
+  0% {
+    background-position: 0% 0%; /* Começa no canto superior esquerdo */
+  }
+  100% {
+    background-position: 100% 100%; /* Termina no canto inferior direito */
+  }
+}
+
+.texto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  font-family: "Bebas Neue";
+  font-size: 35px;
+}
+
+
+.logo {
+  width: 300px;
+  height: 300px;
+  position: relative; /* ou absolute, dependendo do contexto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto; /* opcional para centralizar horizontalmente */
+  padding-bottom: 50px;
+  padding: 40px 0;
+  filter: drop-shadow(10px 0 45px #fff);
+}
+
+/*Cards*/
+
+:root{
+    --background-dark: #2d3548;
+    --text-light: rgba(255,255,255,0.6);
+    --text-lighter: rgba(255,255,255,0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+  }
+  
+  *{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  html{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+  
+  body{
+    height: 100%;
+  }
+
+  h1{
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    font-size: 70px;
+    font-family:"Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    filter: drop-shadow(10px 0 45px #fff);
+  }
+  
+  h3{
+    font-family: "Bungee Spice";
+  }
+
+  p{
+    font-family: "Seymour One", sans-serif;
+  }
+  
+
+  .hero-section{
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    padding:var(--spacing-xxl) var(--spacing-l) ;
+  }
+  
+  
+
+  .card-grid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 70%;
+  }
+  
+  @media(min-width: 540px){
+    .card-grid{
+      grid-template-columns: repeat(2, 1fr); 
+    }
+    h1{
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      font-size: 70px;
+      font-family:"Bungee Spice", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    
+
+ 
+    
+  }
+  
+  @media(min-width: 960px){
+    .card-grid{
+      grid-template-columns: repeat(4, 1fr); 
+    }
+   
+   
+
+  }
+  
+  @media(max-width:500px){
+    h1{
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      font-size: 60px;
+      font-family:"Bungee Spice", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .whatsapp-icon img{
+      width: 50px;
+      height: 60px;
+    }
+    
+    figcaption{
+      display: none;
+    }
+
+  }
+
+  .card{
+    list-style: none;
+    position: relative;
+  }
+  
+  .card:before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+  }
+  
+  .card__background{
+    background-size: contain;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: 
+      filter 200ms linear,
+      transform 200ms linear;
+      background-repeat: no-repeat;
+  }
+  
+  .card:hover .card__background{
+    transform: scale(1.05) translateZ(0);
+  }
+  
+  .card-grid:hover > .card:not(:hover) .card__background{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  }
+  
+  .card__content{
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+  }
+  
+  .card__category{
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px black;
+    
+  }
+  
+  .card__heading{
+    color: var(--text-lighter);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    background-color: #000;
+    height: 145px; /* Apenas para exemplo, ajuste conforme necessário */
+    text-align: center;
+  }
+
+footer img{
+  height: 150px;
+   
+}
+
+.whats{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  height: 70px;
+ 
+}
+
+.whats img{
+width: 40px;
+height: auto;
+cursor: pointer;
+}
+
+figcaption{
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  z-index: 1000;
+  height: 70px;
+  font-size: 25px;
+  
+}
+
+.texto{
+  -webkit-text-stroke: 1px #EE8823;
+}
