@@ -4,12 +4,12 @@ html{
 }
 
 body {
-  background-image: linear-gradient(45deg, #EE8823,#000, #EE8823);
-  background-attachment: fixed; /* Mantém o gradiente fixo enquanto a página rola */
-  background-size: cover; /* Garante que o gradiente cubra toda a área visível */
-  height: 100vh; /* Define a altura do corpo como 100% da altura da janela de visualização */
-  margin: 0; /* Remove as margens padrão do corpo */
-  padding: 0; /* Remove os preenchimentos padrão do corpo */
+  background-image: linear-gradient(45deg,#F07F25,#000,#F07F25,#000,#F07F25);
+  background-attachment: fixed; 
+  background-size: cover; 
+  height: 100vh; 
+  margin: 0; 
+  padding: 0; 
   animation: degrade 5s infinite alternate;
   overflow-x: hidden;
 }
@@ -35,16 +35,21 @@ body {
 
 
 .logo {
-  width: 300px;
-  height: 300px;
-  position: relative; /* ou absolute, dependendo do contexto */
+  width: 500px;
+  height: 350px;
+  position: relative; 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto; /* opcional para centralizar horizontalmente */
+  margin: auto; 
   padding-bottom: 50px;
   padding: 40px 0;
   filter: drop-shadow(10px 0 45px #ffffff);
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover{
+  transform: scale(1.05);
 }
 
 /*Cards*/
@@ -169,7 +174,24 @@ body {
       display: none;
     }
 
+    footer{
+      padding-left: 30px;
+      padding-right: 0px;
+      
+    }
 
+    .logo img{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      padding-right: 100px;
+
+    }
+
+    .card-grid{
+      width: 50%;
+    }
   }
 
   .card{
@@ -228,7 +250,7 @@ body {
   
   .card__heading{
     color: var(--text-lighter);
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
     line-height: 1.4;
     word-spacing: 100vw;
@@ -236,10 +258,10 @@ body {
 
   footer {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center; 
     align-items: center;
     background-color: #000;
-    height: 145px; /* Apenas para exemplo, ajuste conforme necessário */
+    height: 145px; 
     text-align: center;
   }
 
@@ -277,3 +299,6 @@ figcaption{
   -webkit-text-stroke: 1px #EE8823;
 }
 
+.seta{
+  height: 50px;
+}
