@@ -266,6 +266,10 @@ body {
       margin-bottom: 100px;
     }
 
+    .card__content{
+      margin-left: -50px;
+    }
+
     
 
     body{
