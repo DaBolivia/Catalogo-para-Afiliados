@@ -384,6 +384,17 @@ figcaption{
 
 
 .seta{
+  position: relative;
   height: 50px;
   padding: 5px;
+  animation: moveDown 2s infinite alternate;
+}
+
+@keyframes moveDown {
+  from {
+    top: 0; /* Posição inicial no topo */
+  }
+  to {
+    top: 100px; /* Posição final 100px abaixo */
+  }
 }
